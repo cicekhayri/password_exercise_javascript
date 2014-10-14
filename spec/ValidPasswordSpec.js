@@ -8,23 +8,12 @@
 //
 
 function isValid(password) {
-  if (!isPasswordLongEnough(password)) {
-    return false;
-  }
-
-  if (!hasUnderscore(password)) {
-    return false;
-  }
-
-  if (!hasNumber(password)) {
-    return false;
-  }
-
-  if (!hasUppercaseLetter(password)) {
-    return false;
-  }
-
-  if (!hasLowercaseLetter(password)) {
+ 
+  if (!isPasswordLongEnough(password) || 
+     !hasUnderscore(password) ||
+     !hasNumber(password) || 
+     !hasUppercaseLetter(password) || 
+     !hasLowercaseLetter(password)) {
     return false;
   }
   
